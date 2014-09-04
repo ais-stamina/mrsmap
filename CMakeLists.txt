@@ -130,14 +130,14 @@ target_link_libraries( mrsslam mrsmap ${G2O_CORE_LIBRARY} ${G2O_STUFF_LIBRARY} $
 
 
 # -- evaluate_visual_odometry for evaluation of visual odometry performance on RGBD dataset
-add_executable( evaluate_visual_odometry src/tools/evaluation/evaluate_visual_odometry.cpp )
-add_definitions( ${SSE_FLAGS} )
-target_link_libraries( evaluate_visual_odometry mrsmap ${Boost_PROGRAM_OPTIONS_LIBRARY} )
+#add_executable( evaluate_visual_odometry src/tools/evaluation/evaluate_visual_odometry.cpp )
+#add_definitions( ${SSE_FLAGS} )
+#target_link_libraries( evaluate_visual_odometry mrsmap ${Boost_LIBRARIES} )
 
 
 # -- evaluate_visual_odometry_batch for evaluation of visual odometry performance on multiple RGBD datasets
-add_executable( evaluate_visual_odometry_batch src/tools/evaluation/evaluate_visual_odometry_batch.cpp )
-add_definitions( ${SSE_FLAGS} )
-target_link_libraries( evaluate_visual_odometry_batch mrsmap ${Boost_PROGRAM_OPTIONS_LIBRARY} )
+#add_executable( evaluate_visual_odometry_batch src/tools/evaluation/evaluate_visual_odometry_batch.cpp )
+#add_definitions( ${SSE_FLAGS} )
+#target_link_libraries( evaluate_visual_odometry_batch mrsmap ${Boost_LIBRARIES} )
 
 
