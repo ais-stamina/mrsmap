@@ -17,6 +17,8 @@ endif()
 add_definitions( -std=c++0x )
 
 set(CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/cmake/Modules/" ${CMAKE_MODULE_PATH})
+# We need Release build type for catkin build with catkin_tools, I have no idea which version, latest update at 02.10.2014
+SET(CMAKE_BUILD_TYPE Release CACHE STRING "Release build" FORCE)
 
 
 IF( NOT CATKIN_DEVEL_PREFIX STREQUAL "" )

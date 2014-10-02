@@ -49,12 +49,13 @@
 #include "g2o/core/block_solver.h"
 #include "g2o/solvers/csparse/linear_solver_csparse.h"
 #include "g2o/solvers/cholmod/linear_solver_cholmod.h"
-
+#include <tr1/unordered_map>
 
 typedef g2o::BlockSolver< g2o::BlockSolverTraits<6, 3> >  SlamBlockSolver;
 typedef g2o::LinearSolverCSparse<SlamBlockSolver::PoseMatrixType> SlamLinearSolver;
 typedef g2o::LinearSolverCholmod<SlamBlockSolver::PoseMatrixType> SlamLinearCholmodSolver;
 typedef std::tr1::unordered_map<int, g2o::HyperGraph::Vertex*>     VertexIDMap;
+//typedef std::unordered_map<int, g2o::HyperGraph::Vertex*>     VertexIDMap;
 typedef std::set<g2o::HyperGraph::Edge*> EdgeSet;
 
 #include <mrsmap/map/multiresolution_surfel_map.h>
