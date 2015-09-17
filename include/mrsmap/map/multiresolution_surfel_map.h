@@ -312,7 +312,7 @@ namespace mrsmap {
 		static inline void visualizeMeansFunction(spatialaggregate::OcTreeNode<float, NodeValue>* current, spatialaggregate::OcTreeNode<float, NodeValue>* next, void* data);
 
 		void save( const std::string& filename );
-		void load( const std::string& filename );
+		bool load( const std::string& filename );
 
 
 		void indexNodes( int minDepth, int maxDepth, bool includeBranchingNodes = true );

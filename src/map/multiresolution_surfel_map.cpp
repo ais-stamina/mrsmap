@@ -3636,12 +3636,13 @@ void MultiResolutionSurfelMap::save( const std::string& filename ) {
 
 }
 
-void MultiResolutionSurfelMap::load( const std::string& filename ) {
+bool MultiResolutionSurfelMap::load( const std::string& filename ) {
 
 	std::ifstream infile( filename.c_str(), std::ios::in | std::ios::binary );
 
 	if ( !infile.is_open() ) {
 		std::cout << "could not open file " << filename.c_str() << "\n";
+		return false;
 	}
 
 	infile.read( (char*) &min_resolution_, sizeof(float) );
@@ -3692,6 +3693,7 @@ void MultiResolutionSurfelMap::load( const std::string& filename ) {
 		}
 
 	}
+	return true;
 
 }
 
